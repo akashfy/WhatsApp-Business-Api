@@ -12,13 +12,12 @@ WORKDIR /app
 # Binary
 COPY --from=builder /build/whatsapp-bot .
 
-# Source code (extractable)
-COPY auto.go /app/src/auto.go
-COPY go.mod /app/src/go.mod
-COPY go.sum /app/src/go.sum
-COPY Dockerfile /app/src/Dockerfile
+# Source code (full project for extraction)
+COPY . /app/src/
+# Clean up sensitive files in the src folder inside the image
+RUN rm -f /app/src/.env /app/src/whatsapp-bot /app/src/data/*.db*
 
-# Static UI files
+# Static UI files for the app to run
 COPY static/ ./static/
 
 # Data directory for SQLite

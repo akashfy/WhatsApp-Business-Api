@@ -1,4 +1,4 @@
-# WhatsApp Business Hub
+# Official WhatsApp Business Api
 
 A self-hosted WhatsApp automation dashboard built on Meta Cloud API (v25.0). Supports real-time chat, mass broadcasting, auto-replies, and follow-up sequences — all from a clean, responsive UI.
 
@@ -23,7 +23,13 @@ docker-compose up -d --build
 # Open http://localhost:8086
 ```
 
+### 🐳 Docker Hub Image
+Get the pre-built image from Docker Hub:  
+`docker pull akashyadav758/whatsapp-hub`  
+Explore on [Docker Hub](https://hub.docker.com/r/akashyadav758/whatsapp-hub)
+
 ---
+
 
 ## ⚙️ Environment Variables (`.env`)
 
